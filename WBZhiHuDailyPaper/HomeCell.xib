@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="90" id="PpZ-rQ-1ar" customClass="HomeCell">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PpZ-rQ-1ar" id="CPK-Mw-H0W">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="782-MG-YAm">
+                        <rect key="frame" x="15" y="15" width="202" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-KG-9q9">
+                        <rect key="frame" x="232" y="15" width="72" height="59.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="72" id="DZ2-Ww-iDf"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Morepic" translatesAutoresizingMaskIntoConstraints="NO" id="7HE-eF-UHE">
+                        <rect key="frame" x="274" y="60" width="30" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="sSJ-ET-7uZ"/>
+                            <constraint firstAttribute="height" constant="14" id="vfA-Be-fEa"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7HE-eF-UHE" secondAttribute="trailing" constant="15" id="0dP-ar-NSP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="7HE-eF-UHE" secondAttribute="bottom" constant="7" id="67f-8k-8n4"/>
+                    <constraint firstItem="782-MG-YAm" firstAttribute="top" secondItem="CPK-Mw-H0W" secondAttribute="top" constant="15" id="9O1-dm-BLP"/>
+                    <constraint firstAttribute="bottom" secondItem="hdB-KG-9q9" secondAttribute="bottom" constant="15" id="Fjv-LW-Qs7"/>
+                    <constraint firstItem="7HE-eF-UHE" firstAttribute="trailing" secondItem="CPK-Mw-H0W" secondAttribute="trailingMargin" id="Srm-aP-klw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="7HE-eF-UHE" secondAttribute="trailing" constant="7" id="XuO-4x-CTp"/>
+                    <constraint firstItem="hdB-KG-9q9" firstAttribute="top" secondItem="CPK-Mw-H0W" secondAttribute="top" constant="15" id="ZKf-SN-abz"/>
+                    <constraint firstAttribute="trailing" secondItem="hdB-KG-9q9" secondAttribute="trailing" constant="15" id="Zv3-wC-kpV"/>
+                    <constraint firstAttribute="bottom" secondItem="7HE-eF-UHE" secondAttribute="bottom" constant="15" id="aTy-0f-blU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="7HE-eF-UHE" secondAttribute="trailing" constant="7" id="icH-a8-OD9"/>
+                    <constraint firstItem="hdB-KG-9q9" firstAttribute="leading" secondItem="782-MG-YAm" secondAttribute="trailing" constant="15" id="muH-Ox-eUq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="7HE-eF-UHE" secondAttribute="bottom" id="vnS-mE-VAb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="7HE-eF-UHE" secondAttribute="bottom" constant="7" id="wLe-8A-A1Q"/>
+                    <constraint firstItem="782-MG-YAm" firstAttribute="leading" secondItem="CPK-Mw-H0W" secondAttribute="leading" constant="15" id="xBn-AX-Vf1"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="0dP-ar-NSP"/>
+                        <exclude reference="Srm-aP-klw"/>
+                        <exclude reference="XuO-4x-CTp"/>
+                        <exclude reference="aTy-0f-blU"/>
+                        <exclude reference="vnS-mE-VAb"/>
+                        <exclude reference="wLe-8A-A1Q"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="hdB-KG-9q9" id="SYd-pF-Qzr"/>
+                <outlet property="multipicImageView" destination="7HE-eF-UHE" id="JCC-bs-U3Z"/>
+                <outlet property="titleLabel" destination="782-MG-YAm" id="yHQ-dV-7PY"/>
+                <outlet property="titleLabelConstraint" destination="muH-Ox-eUq" id="2Qu-Tx-USn"/>
+            </connections>
+            <point key="canvasLocation" x="243.5" y="301"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Home_Morepic" width="32" height="14"/>
+    </resources>
+</document>
