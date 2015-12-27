@@ -47,6 +47,8 @@ static CGFloat const animationDutation = 0.2f;
     
     [[UIApplication sharedApplication].keyWindow addSubview:imgSV];
     
+
+    
     imgSV.imgUrl = url;
 
     return imgSV;
@@ -68,8 +70,8 @@ static CGFloat const animationDutation = 0.2f;
     
     self.backgroundColor = [UIColor blackColor];
     self.alpha = 0.f;
-    
-    [[UIApplication sharedApplication].keyWindow addSubview:self.scrollView];
+
+  
     [self.scrollView addSubview:self.scaleView];
     [self.scaleView addSubview:self.imageView];
     [self addSubview:self.downLoadBtn];
@@ -133,6 +135,8 @@ static CGFloat const animationDutation = 0.2f;
 #pragma mark - setter and getter
 - (void)setImgUrl:(NSString *)imgUrl{
     _imgUrl = imgUrl;
+    
+      [[UIApplication sharedApplication].keyWindow addSubview:self.scrollView];
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     
