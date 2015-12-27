@@ -4,10 +4,11 @@
  
  
 #Demo Project
+![demo1](https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo1.gif)
 
-<img src="https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo1.gif" width="320"><br/>
-<img src="https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo2.gif" width="320"><br/>
-<img src="https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo3.gif" width="320"><br/>
+![demo2](https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo2.gif)
+
+![demo3](https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo3.gif)
 
 #已完成功能
 * 启动动画的设置
