@@ -4,11 +4,11 @@
  
  
 #Demo Project
-![demo1](https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo1.gif)
+![demo1](http://7xpk2w.com1.z0.glb.clouddn.com/demo1.gif)
 
-![demo2](https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo2.gif)
+![demo2](http://7xpk2w.com1.z0.glb.clouddn.com/demo2.gif)
 
-![demo3](https://github.com/Chatwen/WBZhiHuDailyPaper/tree/master/Snapshots/demo3.gif)
+![demo3](http://7xpk2w.com1.z0.glb.clouddn.com/demo3.gif)
 
 #已完成功能
 * 启动动画的设置
