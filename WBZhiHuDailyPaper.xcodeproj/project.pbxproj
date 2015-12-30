@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5B0FA80F1C29726A000A7998 /* CircleRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0FA80E1C29726A000A7998 /* CircleRefreshView.m */; };
 		5B27CF171C2805FD003B9F75 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B27CF161C2805FD003B9F75 /* WebViewController.m */; };
+		5B29EA6D1C33861800C82E35 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B29EA6B1C33861800C82E35 /* LoginController.m */; };
+		5B29EA6E1C33861800C82E35 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B29EA6C1C33861800C82E35 /* LoginController.xib */; };
+		5B29EA721C33925C00C82E35 /* CWAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B29EA711C33925C00C82E35 /* CWAccount.m */; };
+		5B29EA761C33938100C82E35 /* CWAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B29EA751C33938100C82E35 /* CWAccountTool.m */; };
 		5B2DDB9F1C255DDB009DCEF2 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DDB9E1C255DDB009DCEF2 /* HomeHeaderView.m */; };
 		5B2DDBA41C258AC7009DCEF2 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DDBA11C258AC7009DCEF2 /* CycleScrollView.m */; };
 		5B2DDBAA1C259397009DCEF2 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2DDBA91C259397009DCEF2 /* TopView.xib */; };
@@ -47,7 +51,6 @@
 		5BDF1B0A1C2EAA8F00D7AAE9 /* WebImgScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF1B091C2EAA8F00D7AAE9 /* WebImgScrollView.m */; };
 		5BDF1B171C2ED0F000D7AAE9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF1B0F1C2ED0F000D7AAE9 /* MBProgressHUD+MJ.m */; };
 		5BDF1B181C2ED0F000D7AAE9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF1B111C2ED0F000D7AAE9 /* MBProgressHUD.m */; };
-		5BDF1B1E1C2ED76200D7AAE9 /* OverAllSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF1B1D1C2ED76200D7AAE9 /* OverAllSetting.m */; };
 		5BDF1B211C2EDBDA00D7AAE9 /* StoryExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF1B201C2EDBDA00D7AAE9 /* StoryExtra.m */; };
 		5BDF1B251C2EEDC000D7AAE9 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BDF1B241C2EEDC000D7AAE9 /* MBProgressHUD.bundle */; };
 		5BE801091C23168C00754AAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE801081C23168C00754AAE /* main.m */; };
@@ -81,6 +84,13 @@
 		5B0FA80E1C29726A000A7998 /* CircleRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleRefreshView.m; sourceTree = "<group>"; };
 		5B27CF151C2805FD003B9F75 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		5B27CF161C2805FD003B9F75 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5B29EA6A1C33861800C82E35 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		5B29EA6B1C33861800C82E35 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		5B29EA6C1C33861800C82E35 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		5B29EA701C33925C00C82E35 /* CWAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAccount.h; sourceTree = "<group>"; };
+		5B29EA711C33925C00C82E35 /* CWAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAccount.m; sourceTree = "<group>"; };
+		5B29EA741C33938100C82E35 /* CWAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAccountTool.h; sourceTree = "<group>"; };
+		5B29EA751C33938100C82E35 /* CWAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAccountTool.m; sourceTree = "<group>"; };
 		5B2DDB9D1C255DDB009DCEF2 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
 		5B2DDB9E1C255DDB009DCEF2 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		5B2DDBA01C258AC7009DCEF2 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollView.h; sourceTree = "<group>"; };
@@ -156,8 +166,6 @@
 		5BDF1B0F1C2ED0F000D7AAE9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		5BDF1B101C2ED0F000D7AAE9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		5BDF1B111C2ED0F000D7AAE9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		5BDF1B1C1C2ED76200D7AAE9 /* OverAllSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverAllSetting.h; sourceTree = "<group>"; };
-		5BDF1B1D1C2ED76200D7AAE9 /* OverAllSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverAllSetting.m; sourceTree = "<group>"; };
 		5BDF1B1F1C2EDBDA00D7AAE9 /* StoryExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryExtra.h; sourceTree = "<group>"; };
 		5BDF1B201C2EDBDA00D7AAE9 /* StoryExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryExtra.m; sourceTree = "<group>"; };
 		5BDF1B241C2EEDC000D7AAE9 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -227,6 +235,24 @@
 			name = WBRefresh;
 			sourceTree = "<group>";
 		};
+		5B29EA6F1C338CD000C82E35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B29EA701C33925C00C82E35 /* CWAccount.h */,
+				5B29EA711C33925C00C82E35 /* CWAccount.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5B29EA731C33935A00C82E35 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B29EA741C33938100C82E35 /* CWAccountTool.h */,
+				5B29EA751C33938100C82E35 /* CWAccountTool.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		5B2DDBAC1C25BBD0009DCEF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +309,7 @@
 		5B6560E31C23D2230093C303 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5B72ACF21C3282120029B6F6 /* Login */,
 				5BBA0F741C290E11001A7483 /* ThemePage */,
 				5BB368BF1C23F60000DD267E /* DetailNewsInfo */,
 				5BB368B01C23F1CD00DD267E /* LeftSideDrawer */,
@@ -388,6 +415,26 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		5B72ACF21C3282120029B6F6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5B29EA731C33935A00C82E35 /* Utils */,
+				5B29EA6F1C338CD000C82E35 /* Model */,
+				5B72ACF31C32821D0029B6F6 /* Controller */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		5B72ACF31C32821D0029B6F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B29EA6A1C33861800C82E35 /* LoginController.h */,
+				5B29EA6B1C33861800C82E35 /* LoginController.m */,
+				5B29EA6C1C33861800C82E35 /* LoginController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		5BB368B01C23F1CD00DD267E /* LeftSideDrawer */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,8 +470,6 @@
 			children = (
 				5B2DDC061C26FD2B009DCEF2 /* Theme.h */,
 				5B2DDC071C26FD2B009DCEF2 /* Theme.m */,
-				5BDF1B1C1C2ED76200D7AAE9 /* OverAllSetting.h */,
-				5BDF1B1D1C2ED76200D7AAE9 /* OverAllSetting.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -724,6 +769,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB368BD1C23F43700DD267E /* LeftSideViewController.xib in Resources */,
+				5B29EA6E1C33861800C82E35 /* LoginController.xib in Resources */,
 				5B2DDBAA1C259397009DCEF2 /* TopView.xib in Resources */,
 				5BE801171C23168C00754AAE /* LaunchScreen.storyboard in Resources */,
 				5BB368D81C24FDAE00DD267E /* HomeCell.xib in Resources */,
@@ -816,7 +862,6 @@
 				5BDF1B211C2EDBDA00D7AAE9 /* StoryExtra.m in Sources */,
 				5BE801091C23168C00754AAE /* main.m in Sources */,
 				5B2DDBB61C25C126009DCEF2 /* DetailStory.m in Sources */,
-				5BDF1B1E1C2ED76200D7AAE9 /* OverAllSetting.m in Sources */,
 				5B2DDC081C26FD2B009DCEF2 /* Theme.m in Sources */,
 				5B2F18341C23E0C500EA7B50 /* LaunchImage.m in Sources */,
 				5B50E1711C2AF5AE0017D0AA /* DetailHeaderView.m in Sources */,
@@ -824,6 +869,7 @@
 				5BDF1B171C2ED0F000D7AAE9 /* MBProgressHUD+MJ.m in Sources */,
 				5BB368D31C24F1D500DD267E /* StoryModelTool.m in Sources */,
 				5BBA0F781C290E50001A7483 /* ThemeViewController.m in Sources */,
+				5B29EA761C33938100C82E35 /* CWAccountTool.m in Sources */,
 				5BBA0F801C291FB2001A7483 /* ThemeNews.m in Sources */,
 				5B50E1741C2B01350017D0AA /* DetailFooterView.m in Sources */,
 				5B2DDB9F1C255DDB009DCEF2 /* HomeHeaderView.m in Sources */,
@@ -831,10 +877,12 @@
 				5B2F18301C23DFF400EA7B50 /* HttpTool.m in Sources */,
 				5B2DDC051C26F25C009DCEF2 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				5B2DDBB31C25BC0D009DCEF2 /* DetailViewController.m in Sources */,
+				5B29EA721C33925C00C82E35 /* CWAccount.m in Sources */,
 				5B6561081C23DBB40093C303 /* UIView+Extension.m in Sources */,
 				5BB368D01C24E48300DD267E /* StoryModel.m in Sources */,
 				5B27CF171C2805FD003B9F75 /* WebViewController.m in Sources */,
 				5B6560F71C23D5460093C303 /* LaunchViewController.m in Sources */,
+				5B29EA6D1C33861800C82E35 /* LoginController.m in Sources */,
 				5BBA0F8A1C292756001A7483 /* TableViewDataSource.m in Sources */,
 				5BBA0F9B1C294850001A7483 /* TopImageView.m in Sources */,
 				5BB368DB1C24FDF000DD267E /* HomeCell.m in Sources */,
@@ -977,10 +1025,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = WBZhiHuDailyPaper/PrefixHeader.pch;
 				INFOPLIST_FILE = WBZhiHuDailyPaper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WBZhiHuDailyPape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -997,10 +1046,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = WBZhiHuDailyPaper/PrefixHeader.pch;
 				INFOPLIST_FILE = WBZhiHuDailyPaper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WBZhiHuDailyPape;
 				PRODUCT_NAME = "$(TARGET_NAME)";

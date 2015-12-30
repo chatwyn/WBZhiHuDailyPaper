@@ -13,9 +13,13 @@
 
 #import "DetailViewTool.h"
 #import "ThemeNewsTool.h"
+#import "MBProgressHUD+MJ.h"
+#import "UMSocial.h"
 
 #import "AppDelegate.h"
 #import "MainController.h"
+
+#import "DetailStory.h"
 
 typedef NS_OPTIONS(NSUInteger, NavigationTag){
     NavigationTagBack = 1 << 0,
@@ -35,6 +39,8 @@ DetailViewControllerDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;
 
 @property (nonatomic, strong) DetailViewController *detailVc;
+
+@property (nonatomic, strong) DetailStory *story;
 
 @end
 
@@ -74,8 +80,21 @@ DetailViewControllerDelegate>
 - (NSArray<id<UIPreviewActionItem>> *)previewActionItems{
     
     UIPreviewAction *p1 =[UIPreviewAction actionWithTitle:@"分享" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"分享功能暂未实现" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alertView show];
+        
+        [UMSocialData defaultData].extConfig.qqData.title = @"文博日报";
+        [UMSocialData defaultData].extConfig.qqData.url = self.story.share_url;
+        
+        [[UMSocialDataService defaultDataService]
+         postSNSWithTypes:@[UMShareToQQ]
+         content:self.story.title
+         image:[UIImage imageWithData:
+                [NSData dataWithContentsOfURL:
+                 [NSURL URLWithString:self.story.image]]]
+         location:nil urlResource:nil
+         presentedController:self completion:^(UMSocialResponseEntity *response){
+             [MBProgressHUD showSuccess:@"分享成功"];
+        }];
+        
     }];
     
     NSArray *actions = @[p1];
@@ -109,10 +128,10 @@ DetailViewControllerDelegate>
             }
             break;
         case NavigationTagVote:
-            
+
             break;
         case NavigationTagShare:
-            
+            [self share];
             break;
         case NavigationTagComment:
             
@@ -120,7 +139,24 @@ DetailViewControllerDelegate>
     }
 }
 
+
 #pragma mark - private method
+- (void)share{
+    [UMSocialConfig hiddenNotInstallPlatforms:@[UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToWechatTimeline]];
+    [UMSocialData defaultData].extConfig.qqData.title = @"文博日报";
+    [UMSocialData defaultData].extConfig.qqData.url = self.story.share_url;
+    
+    [UMSocialData defaultData].extConfig.wechatSessionData.url = self.story.share_url;
+    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"文博日报";
+    [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:self.story.share_url];
+    
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:nil
+                                      shareText:self.story.title
+                                     shareImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.story.image]]]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToQQ,UMShareToRenren,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite,UMShareToInstagram,UMShareToLWSession,nil]
+                                       delegate:nil];
+}
 
 - (DetailViewController *)setContainerController{
     
@@ -153,6 +189,13 @@ DetailViewControllerDelegate>
 }
 
 #pragma mark - getter and setter
+- (void)setStoryId:(NSNumber *)storyId{
+    _storyId = storyId;
+    [DetailViewTool getDetailStoryWithStoryId:storyId Callback:^(id obj) {
+        self.story = obj;
+        
+    }];
+}
 
 - (NewsNavigation *)naviView{
     if (_naviView == nil) {

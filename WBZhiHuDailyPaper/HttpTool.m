@@ -16,7 +16,7 @@
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    
+
     [mgr GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

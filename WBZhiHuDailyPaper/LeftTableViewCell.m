@@ -10,10 +10,12 @@
 #import "LeftTableViewCell.h"
 #import "Theme.h"
 
+#import <objc/runtime.h>
 @implementation LeftTableViewCell
 
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+
     if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.backgroundColor = kClearColor;

@@ -13,7 +13,8 @@
 #import "ThemeTool.h"
 #import "MJExtension.h"
 #import "TableViewDataSource.h"
-#import "OverAllSetting.h"
+#import "CWAccountTool.h"
+#import "LoginController.h"
 
 #import "LeftTableViewCell.h"
 
@@ -29,6 +30,7 @@ static NSString * const isNight = @"isNight";
 @property (nonatomic, strong) TableViewDataSource *tableViewDataSource;
 
 @property (weak, nonatomic) IBOutlet UIButton *nightBtn;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end
 
@@ -36,6 +38,8 @@ static NSString * const isNight = @"isNight";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    获取账号信息
+    [self updateAccount];
     
     [ThemeTool getThemesWithSuccessfulBlock:^(id obj) {
         [self.themes addObjectsFromArray:obj];
@@ -44,7 +48,6 @@ static NSString * const isNight = @"isNight";
     
     
     BOOL night = [[NSUserDefaults standardUserDefaults] boolForKey:isNight];
-    [OverAllSetting shareSetting].night = night;
     self.nightBtn.selected = night;
 }
 
@@ -68,14 +71,45 @@ static NSString * const isNight = @"isNight";
 }
 - (IBAction)nightDaySwitch:(UIButton *)sender {
     sender.selected =! sender.selected;
-    
-    [OverAllSetting shareSetting].night = sender.selected;
+
     [[NSUserDefaults standardUserDefaults] setBool:sender.selected forKey:isNight];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
+#pragma mark - event response
+- (IBAction)Login:(id)sender {
+    LoginController *lvc = [[LoginController alloc] init];
+    lvc.delegate = self;
+    [self presentViewController:lvc animated:YES completion:nil];
+    
+}
 
 #pragma mark - private method
+
+- (void)updateAccount{
+    CWAccount *account = [CWAccountTool account];
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:account.iconUrl]]];
+    image = [self OriginImage:image scaleToSize:CGSizeMake(35, 35)];
+    [self.loginBtn setImage:image forState:UIControlStateNormal];
+    self.loginBtn.imageView.layer.cornerRadius = self.loginBtn.imageView.width * 0.5;
+    self.loginBtn.imageView.layer.masksToBounds = YES;
+    self.loginBtn.imageView.size = CGSizeMake(35, 35);
+    [self.loginBtn setTitle:account.usernName forState:UIControlStateNormal];
+}
+
+-(UIImage*) OriginImage:(UIImage *)image scaleToSize:(CGSize)size
+{
+    UIGraphicsBeginImageContext(size);  //size 为CGSize类型，即你所需要的图片尺寸
+    
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;   //返回的就是已经改变的图片
+}
+
 - (void)setDataSource{
     
     TableViewCellConfigureBlock configureCell = ^(LeftTableViewCell *cell, Theme *theme) {

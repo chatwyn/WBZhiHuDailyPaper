@@ -14,4 +14,6 @@
 
 @property (nonatomic, weak) MainController *delegate;
 
+- (void)updateAccount;
+
 @end

@@ -10,6 +10,6 @@
 
 @interface UIWindow (Expand)
 
-- (void)showLanuchPage;
+- (void)showLanuchPageAndSetUmeng;
 
 @end

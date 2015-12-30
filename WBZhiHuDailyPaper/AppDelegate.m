@@ -10,25 +10,36 @@
 #import "UIWindow+Expand.h"
 #import "SDWebImageManager.h"
 #import "MainController.h"
+#import "UMSocialSnsService.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:kScreenBounds];
- 
-    self.mainViewController = [[MainController alloc] init];
-    self.window.rootViewController = self.mainViewController;
     
+    self.mainViewController = [[MainController alloc] init];
+    
+    self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
     
-    [self.window showLanuchPage];
-
+    [self.window showLanuchPageAndSetUmeng];
+    
     return YES;
 }
 
-- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如支付宝SDK等
+    }
+    return result;
+}
 
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{
+    
     if([shortcutItem.type isEqualToString:@"one"]){
         
     }

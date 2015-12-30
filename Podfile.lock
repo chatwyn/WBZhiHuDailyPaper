@@ -36,17 +36,20 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - UMengSocial (4.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - MJExtension
   - MMDrawerController
   - SDWebImage (~> 3.7.2)
+  - UMengSocial (~> 4.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 7f317038a9710cabfa43ec56396b307b45df72ab
   MJExtension: de557e1c48ef3212590d3203764c8003fae68815
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  UMengSocial: e649f30dd9a3686c74daba880e83f818f66bd890
 
 COCOAPODS: 0.39.0

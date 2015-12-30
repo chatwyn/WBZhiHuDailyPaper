@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftSideViewController">
             <connections>
+                <outlet property="loginBtn" destination="Xfd-XP-4QL" id="7Jh-xS-hNt"/>
                 <outlet property="nightBtn" destination="o2W-Sr-bdo" id="tLt-fP-M4p"/>
                 <outlet property="tableView" destination="sxZ-6T-cT9" id="2We-T0-gSX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="220" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfd-XP-4QL">
+                <button contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfd-XP-4QL">
                     <rect key="frame" x="0.0" y="30" width="220" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="pp9-eR-37U"/>
@@ -29,6 +30,9 @@
                     <state key="normal" title="请登录" image="Menu_Avatar">
                         <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="Login:" destination="-1" eventType="touchUpInside" id="euw-5O-cSv"/>
+                    </connections>
                 </button>
                 <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR9-Cw-Z1m">
                     <rect key="frame" x="0.0" y="74" width="70" height="44"/>

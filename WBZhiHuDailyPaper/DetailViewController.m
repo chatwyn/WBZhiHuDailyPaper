@@ -13,7 +13,7 @@
 #import "CycleScrollView.h"
 #import "ThemeNewsTool.h"
 #import "WebViewController.h"
-#import "OverAllSetting.h"
+
 
 #import "DetailHeaderView.h"
 #import "DetailFooterView.h"
@@ -34,7 +34,7 @@
 @property (nonatomic, strong) DetailHeaderView *headerView;
 @property (nonatomic, strong) DetailFooterView *footerView;
 
-@property (nonatomic, strong) OverAllSetting *setting;
+
 
 @end
 
@@ -82,14 +82,6 @@
     [webView stringByEvaluatingJavaScriptFromString:jsGetImages];//注入js方法
     [webView stringByEvaluatingJavaScriptFromString:@"getImages()"];
     
-    if (self.setting.night) {
-        //字体颜色
-        [webView    stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.webkitTextFillColor= 'white'"];
-//        //页面背景色
-        
-    }
-
-    [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.background='black'"];
     //    上拉加载
     NSString *height_str= [webView stringByEvaluatingJavaScriptFromString:@"document.body.scrollHeight"];
     CGFloat height = [height_str floatValue];
@@ -177,12 +169,6 @@
 }
 
 #pragma mark - getter and setter
-- (OverAllSetting *)setting{
-    if (_setting == nil) {
-        _setting = [OverAllSetting shareSetting];
-    }
-    return _setting;
-}
 - (UIWebView *)webView{
     if (_webView == nil) {
         _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, kScreenHeight - 20 - 40)];

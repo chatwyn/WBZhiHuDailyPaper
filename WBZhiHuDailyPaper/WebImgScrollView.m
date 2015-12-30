@@ -58,10 +58,6 @@ static CGFloat const animationDutation = 0.2f;
 #pragma mark - UIScrollView  delegate
 - (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-    
-    if (CGSizeEqualToSize(scrollView.contentSize, CGSizeMake(kScreenWidth, kScreenHeight - 40))){
-        scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight);
-    }
     return self.scaleView;
 }
 
@@ -157,9 +153,9 @@ static CGFloat const animationDutation = 0.2f;
         _scrollView.bouncesZoom = YES;
         _scrollView.delegate = self;
         _scrollView.bounces = YES;
+        _scrollView.alwaysBounceVertical = YES;
         _scrollView.minimumZoomScale = 1.0;
         _scrollView.maximumZoomScale = 2.5;
-        _scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight);
         _scrollView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 40);
     }
     return _scrollView;
