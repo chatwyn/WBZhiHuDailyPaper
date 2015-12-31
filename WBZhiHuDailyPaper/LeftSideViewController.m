@@ -88,6 +88,8 @@ static NSString * const isNight = @"isNight";
 
 - (void)updateAccount{
     CWAccount *account = [CWAccountTool account];
+    if (!account)  return;
+
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:account.iconUrl]]];
     image = [self OriginImage:image scaleToSize:CGSizeMake(35, 35)];
     [self.loginBtn setImage:image forState:UIControlStateNormal];
