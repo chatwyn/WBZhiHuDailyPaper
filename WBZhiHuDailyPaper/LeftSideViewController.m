@@ -21,7 +21,9 @@
 static NSString * const leftCell = @"leftCell";
 static NSString * const isNight = @"isNight";
 
-@interface LeftSideViewController ()<UITableViewDelegate>
+@interface LeftSideViewController ()
+<UITableViewDelegate,
+LoginControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *themes;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -99,7 +101,7 @@ static NSString * const isNight = @"isNight";
     [self.loginBtn setTitle:account.usernName forState:UIControlStateNormal];
 }
 
--(UIImage*) OriginImage:(UIImage *)image scaleToSize:(CGSize)size
+- (UIImage*) OriginImage:(UIImage *)image scaleToSize:(CGSize)size
 {
     UIGraphicsBeginImageContext(size);  //size 为CGSize类型，即你所需要的图片尺寸
     

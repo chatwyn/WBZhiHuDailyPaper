@@ -14,7 +14,7 @@
 #import "DetailViewTool.h"
 #import "ThemeNewsTool.h"
 #import "MBProgressHUD+MJ.h"
-#import "UMSocial.h"
+//#import "UMSocial.h"
 
 #import "AppDelegate.h"
 #import "MainController.h"
@@ -81,20 +81,20 @@ DetailViewControllerDelegate>
     
     UIPreviewAction *p1 =[UIPreviewAction actionWithTitle:@"分享" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
         
-        [UMSocialData defaultData].extConfig.qqData.title = @"文博日报";
-        [UMSocialData defaultData].extConfig.qqData.url = self.story.share_url;
-        
-        [[UMSocialDataService defaultDataService]
-         postSNSWithTypes:@[UMShareToQQ]
-         content:self.story.title
-         image:[UIImage imageWithData:
-                [NSData dataWithContentsOfURL:
-                 [NSURL URLWithString:self.story.image]]]
-         location:nil urlResource:nil
-         presentedController:self completion:^(UMSocialResponseEntity *response){
-             [MBProgressHUD showSuccess:@"分享成功"];
-        }];
-        
+//        [UMSocialData defaultData].extConfig.qqData.title = @"文博日报";
+//        [UMSocialData defaultData].extConfig.qqData.url = self.story.share_url;
+//        
+//        [[UMSocialDataService defaultDataService]
+//         postSNSWithTypes:@[UMShareToQQ]
+//         content:self.story.title
+//         image:[UIImage imageWithData:
+//                [NSData dataWithContentsOfURL:
+//                 [NSURL URLWithString:self.story.image]]]
+//         location:nil urlResource:nil
+//         presentedController:self completion:^(UMSocialResponseEntity *response){
+//             [MBProgressHUD showSuccess:@"分享成功"];
+//        }];
+//        
     }];
     
     NSArray *actions = @[p1];
@@ -131,7 +131,7 @@ DetailViewControllerDelegate>
 
             break;
         case NavigationTagShare:
-            [self share];
+//            [self share];
             break;
         case NavigationTagComment:
             
@@ -141,23 +141,28 @@ DetailViewControllerDelegate>
 
 
 #pragma mark - private method
-- (void)share{
-    [UMSocialConfig hiddenNotInstallPlatforms:@[UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToWechatTimeline]];
-    [UMSocialData defaultData].extConfig.qqData.title = @"文博日报";
-    [UMSocialData defaultData].extConfig.qqData.url = self.story.share_url;
-    
-    [UMSocialData defaultData].extConfig.wechatSessionData.url = self.story.share_url;
-    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"文博日报";
-    [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:self.story.share_url];
-    
-    [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:nil
-                                      shareText:self.story.title
-                                     shareImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.story.image]]]
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToQQ,UMShareToRenren,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite,UMShareToInstagram,UMShareToLWSession,nil]
-                                       delegate:nil];
-}
+//- (void)share{
+//    [UMSocialConfig hiddenNotInstallPlatforms:@[UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToWechatTimeline]];
+//    [UMSocialData defaultData].extConfig.qqData.title = @"文博日报";
+//    [UMSocialData defaultData].extConfig.qqData.url = self.story.share_url;
+//    
+//    [UMSocialData defaultData].extConfig.wechatSessionData.url = self.story.share_url;
+//    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"文博日报";
+//    [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:self.story.share_url];
+//    
+//    [UMSocialSnsService presentSnsIconSheetView:self
+//                                         appKey:nil
+//                                      shareText:self.story.title
+//                                     shareImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.story.image]]]
+//                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToQQ,UMShareToRenren,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite,UMShareToInstagram,UMShareToLWSession,nil]
+//                                       delegate:nil];
+//}
 
+/**
+ *  创建一个子控制器
+ *
+ *  @return 子控制器
+ */
 - (DetailViewController *)setContainerController{
     
     DetailViewController *detail = [[DetailViewController alloc] init];

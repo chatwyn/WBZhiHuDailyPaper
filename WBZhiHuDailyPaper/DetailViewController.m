@@ -14,13 +14,11 @@
 #import "ThemeNewsTool.h"
 #import "WebViewController.h"
 
-
 #import "DetailHeaderView.h"
 #import "DetailFooterView.h"
 #import "WebImgScrollView.h"
 
 #import "ContainerController.h"
-
 
 @interface DetailViewController ()<UIWebViewDelegate>
 

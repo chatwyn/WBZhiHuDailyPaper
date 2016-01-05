@@ -10,7 +10,10 @@
 
 @interface CWAccount : NSObject
 
+/**usernName  用户名*/
 @property (nonatomic, copy) NSString *usernName;
+
+/**iconUrl  头像url*/
 @property (nonatomic, copy) NSString *iconUrl;
 
 @end

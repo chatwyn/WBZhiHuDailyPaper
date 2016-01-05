@@ -11,9 +11,13 @@
 typedef void(^CallBack)(id obj);
 
 @interface DetailViewTool : NSObject
-
+/**
+ *  获得某个id的详细内容
+ */
 + (void)getDetailStoryWithStoryId:(NSNumber *)storyId Callback:(CallBack)callBack;
-
+/**
+ *  获得id的点赞评论数
+ */
 + (void)getStoryExtraWithStoryId:(NSNumber *)storyId Callback:(CallBack)callBack;
 
 @end

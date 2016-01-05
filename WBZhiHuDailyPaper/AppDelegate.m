@@ -10,7 +10,9 @@
 #import "UIWindow+Expand.h"
 #import "SDWebImageManager.h"
 #import "MainController.h"
-#import "UMSocialSnsService.h"
+//#import "UMSocialSnsService.h"
+
+//取消了登陆和分享，友盟有点占空间，全部注释了，你可重新导入框架 ，把注释取消使用
 
 @implementation AppDelegate
 
@@ -28,14 +30,14 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    BOOL result = [UMSocialSnsService handleOpenURL:url];
-    if (result == FALSE) {
-        //调用其他SDK，例如支付宝SDK等
-    }
-    return result;
-}
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+//{
+//    BOOL result = [UMSocialSnsService handleOpenURL:url];
+//    if (result == FALSE) {
+//        //调用其他SDK，例如支付宝SDK等
+//    }
+//    return result;
+//}
 
 
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{

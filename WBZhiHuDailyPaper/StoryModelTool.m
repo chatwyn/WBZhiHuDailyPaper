@@ -30,7 +30,7 @@
 //    计算现有的id
         [self calculteNewsIds];
         
-        objc_setAssociatedObject([self class], @selector(init), sc.date, OBJC_ASSOCIATION_COPY_NONATOMIC);
+        objc_setAssociatedObject([self class], @selector(items), sc.date, OBJC_ASSOCIATION_COPY_NONATOMIC);
         callBack(self.items);
     } failure:^(NSError *error) {
         nil;

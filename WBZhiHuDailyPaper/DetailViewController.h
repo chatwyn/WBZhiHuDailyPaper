@@ -14,7 +14,10 @@
 @protocol  DetailViewControllerDelegate <NSObject>
 
 @optional
-
+/**
+ *  通知containerController滚动到下一个页面
+ *
+ */
 - (void)scrollToNextViewWithNumber:(NSNumber *)storyId;
 
 - (void)scrollToLastViewWithNumber:(NSNumber *)storyId;

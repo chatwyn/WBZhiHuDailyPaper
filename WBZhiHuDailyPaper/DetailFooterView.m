@@ -24,8 +24,6 @@ static float const animatinDuration = 0.2f;
 
 @end
 
-
-
 @implementation DetailFooterView
 
 + (DetailFooterView *)attachObserveToScrollView:(UIScrollView *)scrollView

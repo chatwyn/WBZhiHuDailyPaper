@@ -10,7 +10,8 @@
 
 @interface TopImageView ()
 
-@property (nonatomic, strong) UIScrollView *scrollView;
+#warning 以前用的strong是错误的，会导致循环引用无法释放
+@property (nonatomic, weak) UIScrollView *scrollView;
 
 @end
 
@@ -44,7 +45,9 @@
     
 }
 
-- (void)dealloc{
-    [self.scrollView removeObserver:self forKeyPath:@"contentOffSet"];
-}
+#warning 互相引用，会导致无法释放  用weak的话scrollView 会先释放
+//- (void)dealloc{
+//    [self.scrollView removeObserver:self forKeyPath:@"contentOffSet"];
+//
+//}
 @end

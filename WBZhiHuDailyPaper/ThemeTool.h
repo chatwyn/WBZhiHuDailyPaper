@@ -12,7 +12,11 @@
 typedef void(^SuccessfulBlock)(id obj);
 
 @interface ThemeTool : NSObject
-
+/**
+ *  获得主题日报的列表
+ *
+ *  @param block 回调主题日报数据
+ */
 + (void)getThemesWithSuccessfulBlock:(SuccessfulBlock)block;
 
 @end

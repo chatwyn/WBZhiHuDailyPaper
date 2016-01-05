@@ -122,9 +122,5 @@
     self.activityView.frame = self.bounds;
 }
 
-#pragma mark - life cycle
-- (void)dealloc{
-    [self.scrollView removeObserver:self forKeyPath:@"contentOffset"];
-}
 
 @end

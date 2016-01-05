@@ -57,6 +57,9 @@ HomeCellDelegate>
     
 }
 
+- (void)dealloc{
+    [self.tableView removeObserver:self.topView forKeyPath:@"contentOffset"];
+}
 #pragma mark - HomeCell Delegate
 
 - (UIViewController *)getViewControllerWithId:(NSNumber *)storyId{
