@@ -11,5 +11,6 @@
 @interface HttpTool : NSObject
 
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
+    
 
 @end

@@ -96,6 +96,7 @@ DetailViewControllerDelegate>
 //        }];
 //        
     }];
+
     
     NSArray *actions = @[p1];
     return actions;

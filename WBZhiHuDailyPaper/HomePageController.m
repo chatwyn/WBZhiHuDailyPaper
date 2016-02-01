@@ -67,6 +67,7 @@ HomeCellDelegate>
     //    上拉刷新
     if (offSetY  > scrollView.contentSize.height - 1.5 * kScreenHeight) {
         [_tool loadFormerStoriesWithUpdateBack:^{
+            
             [self.tableView insertSections:
              [NSIndexSet indexSetWithIndex:self.stories.count -1]
                           withRowAnimation:UITableViewRowAnimationFade];

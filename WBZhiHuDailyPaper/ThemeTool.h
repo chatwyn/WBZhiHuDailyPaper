@@ -19,4 +19,5 @@ typedef void(^SuccessfulBlock)(id obj);
  */
 + (void)getThemesWithSuccessfulBlock:(SuccessfulBlock)block;
 
+
 @end

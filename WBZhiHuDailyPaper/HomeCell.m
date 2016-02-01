@@ -29,7 +29,6 @@
     NSURL *url = [NSURL URLWithString:storyModel.images[0]];
     
     if (url) {
-        
         self.titleLabelConstraint.constant = 15;
         self.iconImageView.hidden = NO;
         

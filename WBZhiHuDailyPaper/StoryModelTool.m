@@ -29,7 +29,6 @@
         [self.items addObject:sc];
 //    计算现有的id
         [self calculteNewsIds];
-        
         objc_setAssociatedObject([self class], @selector(items), sc.date, OBJC_ASSOCIATION_COPY_NONATOMIC);
         callBack(self.items);
     } failure:^(NSError *error) {
@@ -49,17 +48,18 @@
 }
 
 - (void)loadFormerStoriesWithUpdateBack:(UpdateBack)updateBack{
-    id data = objc_getAssociatedObject([self class], @selector(init));
+    id data = objc_getAssociatedObject([self class], @selector(items));
     if (self.isLoading) {
         return;
     }
     self.loading = !self.loading;
     NSString *url = [NSString stringWithFormat:@"http://news-at.zhihu.com/api/4/news/before/%@",data];
+
     [HttpTool get:url params:nil success:^(id json) {
         SectionModel *sc = [SectionModel mj_objectWithKeyValues:json];
         [self.items addObject:sc];
         [self calculteNewsIds];
-        objc_setAssociatedObject([self class], @selector(init), sc.date, OBJC_ASSOCIATION_COPY_NONATOMIC);
+        objc_setAssociatedObject([self class], @selector(items), sc.date, OBJC_ASSOCIATION_COPY_NONATOMIC);
         updateBack();
         self.loading = !self.loading;
     } failure:^(NSError *error) {
